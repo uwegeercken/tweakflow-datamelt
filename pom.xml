@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.datamelt</groupId>
+    <artifactId>tweakflow-datamelt</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <distributionManagement>
+        <repository>
+            <id>nexus</id>
+            <name>Releases</name>
+            <url>http://silent1:8081/repository/maven-releases</url>
+            <layout>default</layout>
+        </repository>
+        <snapshotRepository>
+            <id>nexus</id>
+            <name>Snapshot</name>
+            <url>http://silent1:8081/repository/maven-snapshots</url>
+            <layout>default</layout>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <build>
+    <plugins>
+        <!-- compilation -->
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.6.2</version>
+            <configuration>
+                <compilerArgs>
+                    <!--<arg>-verbose</arg>-->
+                    <arg>-Xlint:all,-options,-path</arg>
+                </compilerArgs>
+            </configuration>
+        </plugin>
+
+        <!-- making a jar -->
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>3.1.1</version>
+            <configuration>
+                <archive>
+                    <manifest>
+                        <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                        <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+                    </manifest>
+                </archive>
+            </configuration>
+        </plugin>
+    </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.twineworks</groupId>
+            <artifactId>tweakflow</artifactId>
+            <version>1.3.3-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+</project>
