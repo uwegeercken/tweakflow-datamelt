@@ -11,7 +11,7 @@ Run "mvn clean install" to create the jar file. Place the file in the Tweakstree
 
 To use the libtary use an import statement like this: "import coordinates from 'datamelt/coords.tf';".
 
-Then call: coordinates.utm2ll() or coordinates.ll2deg() or coordinates.decimal2degrees()
+Then call: coordinates.utm2ll() or coordinates.ll2utm() or coordinates.decimal2degrees()
 
-last update: uwe geercken -2021-03-08
+last update: uwe geercken - 2021-03-08
 
