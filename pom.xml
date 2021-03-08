@@ -75,7 +75,7 @@
         <dependency>
             <groupId>com.twineworks</groupId>
             <artifactId>tweakflow</artifactId>
-            <version>1.3.3-SNAPSHOT</version>
+            <version>1.3.2</version>
         </dependency>
 
         <!-- junit -->
