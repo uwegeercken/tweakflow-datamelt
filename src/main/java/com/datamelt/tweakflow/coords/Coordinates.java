@@ -164,14 +164,13 @@ public class Coordinates
                 hemis = "S";
             }
 
-            Map<String, Value> coordinates = new HashMap<String, Value>();
+            Map<String, Value> coordinates = new HashMap<>();
             coordinates.put("easting",Values.make(easting));
             coordinates.put("northing",Values.make(northing));
             coordinates.put("zone",Values.make(zone));
             coordinates.put("hemisphere",Values.make(hemis));
 
-            final Value value = Values.makeDict(coordinates);
-            return value;
+            return Values.makeDict(coordinates);
 
         }
     }
@@ -199,7 +198,7 @@ public class Coordinates
             long x = easting.longNum() - 500000;
             long y = northing.longNum();
 
-            if (hemis.string().toUpperCase().equals('S'))
+            if (hemis.string().toUpperCase().equals("S"))
             {
                 y -= 10000000;
             }
@@ -253,12 +252,11 @@ public class Coordinates
 
             double lon = (d - d3 / 6 * (1 + 2 * p_tan2 + c) + d5 / 120 * (5 - 2 * c + 28 * p_tan2 - 3 * c2 + 8 * E_P2 + 24 * p_tan4)) / p_cos;
 
-            Map<String, Value> coordinates = new HashMap<String, Value>();
+            Map<String, Value> coordinates = new HashMap<>();
             coordinates.put("latitude",Values.make(Math.toDegrees(lat)));
             coordinates.put("longitude",Values.make(Math.toDegrees(lon) + cm));
 
-            final Value value = Values.makeDict(coordinates);
-            return value;
+            return Values.makeDict(coordinates);
         }
     }
 

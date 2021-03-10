@@ -33,7 +33,7 @@ export library coordinates {
 
 doc
 ~~~
-`(easting, northing, zone, hemis) -> dict`
+`(long easting, long northing, long zone, string hemis) -> dict`
 
 Easting and northing are UTM coordinates, Zone is the numeric value of the UTM zone and hemis defines the hemisphere of the zone (N or S).
 The ellipsoid the coordinates are based on must be WGS84.
@@ -50,11 +50,11 @@ Returns nil if any of the expected values is nil.
 }
 ```
 ~~~
-  function utm2ll: (easting, northing, zone, hemis)  -> via {:class "com.datamelt.tweakflow.coords.Coordinates$utm2ll"};
+  function utm2ll: (long easting, long northing, long zone, string hemis)  -> via {:class "com.datamelt.tweakflow.coords.Coordinates$utm2ll"};
 
 doc
 ~~~
-`(latitude, longitude) -> dict`
+`(double latitude, double longitude) -> dict`
 
 Returns a dict consisting of values for easting, northing, zone and hemisphere - converted from the latitude and longitude values.
 
@@ -70,11 +70,11 @@ Returns nil if any of the expected values is nil or not of type double or long.
 }
 ```
 ~~~
-  function ll2utm: (latitude, longitude)  -> via {:class "com.datamelt.tweakflow.coords.Coordinates$ll2utm"};
+  function ll2utm: (double latitude, double longitude)  -> via {:class "com.datamelt.tweakflow.coords.Coordinates$ll2utm"};
 
 doc
 ~~~
-`(latitude, longitude) -> dict`
+`(double latitude, double longitude) -> dict`
 
 Latitude and longitude values are converted to degrees, minutes and seconds.
 
@@ -96,7 +96,7 @@ Returns nil if any of the expected values is nil or not of type double or long.
 }
 ```
 ~~~
-  function decimal2degrees: (latitude, longitude)  -> via {:class "com.datamelt.tweakflow.coords.Coordinates$decimal2degrees"};
+  function decimal2degrees: (double latitude, double longitude)  -> via {:class "com.datamelt.tweakflow.coords.Coordinates$decimal2degrees"};
 
 }
 
