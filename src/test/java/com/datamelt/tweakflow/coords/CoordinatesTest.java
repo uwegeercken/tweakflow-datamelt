@@ -137,11 +137,6 @@ class CoordinatesTest {
         assertEquals(19.82011999278086, seconds);
     }
 
-    //  :longitude {
-    //    :degrees 9,
-    //    :minutes 0,
-    //    :seconds 39.56560919009178
-
     @Test
     void testDecimal2degreesSampleValueLongitudeDegrees() {
         Coordinates.decimal2degrees d = new Coordinates.decimal2degrees();
