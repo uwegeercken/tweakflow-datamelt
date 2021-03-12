@@ -259,28 +259,4 @@ public class Coordinates
             return Values.makeDict(coordinates);
         }
     }
-
-    public static void main(String[] args)
-    {
-        utm2ll u = new Coordinates.utm2ll();
-        decimal2degrees dd = new Coordinates.decimal2degrees();
-
-        Value val = u.call(null,Values.make(572497),Values.make(6013607),Values.make(32) ,Values.make("U"));
-
-        Value val2 = dd.call(null,val.dict().get("latitude"),val.dict().get("longitude"));
-
-        System.out.println("Lat/long dec: " + val.toString());
-
-        System.out.println("Decimals to degrees: " + val2.toString());
-
-        ll2utm lu = new Coordinates.ll2utm();
-
-        Value val3 = lu.call(null, val.dict().get("latitude"),val.dict().get("longitude"));
-
-        System.out.println("Lat/long to UTM: " + val3.toString());
-
-
-
-
-    }
 }
