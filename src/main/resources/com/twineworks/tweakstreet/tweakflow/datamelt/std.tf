@@ -69,6 +69,31 @@ true
 
 doc
 ~~~
+The strings library contains functions related to string processing.
+~~~
+
+export library strings {
+
+doc
+~~~
+`(string value) -> string`
+
+Reverse a given string.
+
+Returns nil if expected values is nil.
+
+```tweakflow
+> strings.revers("Donnerstag")
+gatsrennoD
+
+```
+~~~
+  function code: (string value)  -> via {:class "com.datamelt.tweakflow.std.Strings$reverse"};
+
+}
+
+doc
+~~~
 The coordinates library contains functions for converting coordinates.
 ~~~
 

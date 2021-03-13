@@ -15,17 +15,20 @@ public class Soundex
             '5','0','1','2','6','2','3','0','1','0','2','0','2'
     };
 
-    /** Convert the given String to its Soundex code.
+    /*
+     * code in generateCode section originates from:
      *
-     * @param	s	String to be converted to its soundex code
-     * @return 	null If the given string can't be mapped to Soundex.
+     * Copyright (c) Ian F. Darwin, http://www.darwinsys.com/, 1996-2002.
+     * All rights reserved. Software written by Ian F. Darwin and others.
+     * $Id: LICENSE,v 1.8 2004/02/09 03:33:38 ian Exp $
+     *
      */
     private static String generateCode(String s) {
 
         // Algorithm works on uppercase (mainframe era).
         String t = s.toUpperCase();
 
-        StringBuffer res = new StringBuffer();
+        StringBuilder res = new StringBuilder();
         char c, prev = '?';
 
         // Main loop: find up to 4 chars that map.
