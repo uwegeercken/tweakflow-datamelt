@@ -2,7 +2,7 @@ package com.datamelt.tweakflow.std;
 
 import com.twineworks.tweakflow.lang.values.*;
 
-public class Strings
+public class Stringer
 {
         public static final class reverse implements UserFunction, Arity1UserFunction
         {
@@ -37,7 +37,7 @@ public class Strings
     {
         UserCallContext context = null;
 
-        Strings.reverse r = new Strings.reverse();
+        Stringer.reverse r = new Stringer.reverse();
         Value v = r.call(context, Values.NIL);
 
         System.out.println(v.string());

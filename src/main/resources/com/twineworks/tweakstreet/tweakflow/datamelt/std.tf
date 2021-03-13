@@ -69,10 +69,10 @@ true
 
 doc
 ~~~
-The strings library contains functions related to string processing.
+The texts library contains functions related to string processing.
 ~~~
 
-export library strings {
+export library stringer {
 
 doc
 ~~~
@@ -80,15 +80,15 @@ doc
 
 Reverse a given string.
 
-Returns nil if expected values is nil.
+Returns nil if the expected value is nil.
 
 ```tweakflow
-> strings.revers("Donnerstag")
+> stringer.reverse("Donnerstag")
 gatsrennoD
 
 ```
 ~~~
-  function code: (string value)  -> via {:class "com.datamelt.tweakflow.std.Strings$reverse"};
+  function reverse: (string value)  -> via {:class "com.datamelt.tweakflow.std.Stringer$reverse"};
 
 }
 
