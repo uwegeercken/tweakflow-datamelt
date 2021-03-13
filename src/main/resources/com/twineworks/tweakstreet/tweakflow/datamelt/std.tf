@@ -19,10 +19,53 @@
 
 doc
 ~~~
-The `coords` module contains libraries for computing tasks involving coordinates.
+The `std` module contains libraries for various functions.
 ~~~
 
 module;
+
+doc
+~~~
+The soundex library contains functions using the soundex algorithm.
+~~~
+
+export library soundex {
+
+doc
+~~~
+`(string value) -> string`
+
+Convert string value to its soundex code representation.
+
+Returns nil if expected values is nil.
+
+```tweakflow
+> soundex.code("Hamburg")
+H516
+
+```
+~~~
+  function code: (string value)  -> via {:class "com.datamelt.tweakflow.std.Soundex$code"};
+
+doc
+~~~
+`(string value, string comparevalue) -> boolean`
+
+Compare two string values using their soundex code representation.
+
+Returns true if the soundex code of the two values is the same otherwise returns false.
+
+Returns nil if any of the expected values is nil.
+
+```tweakflow
+> soundex.equals("Hamburg", "Himmburgg")
+true
+
+```
+~~~
+  function equals: (string value, string comparevalue)  -> via {:class "com.datamelt.tweakflow.std.Soundex$equals"};
+
+}
 
 doc
 ~~~
@@ -50,7 +93,7 @@ Returns nil if any of the expected values is nil.
 }
 ```
 ~~~
-  function utm2ll: (long easting, long northing, long zone, string hemis)  -> via {:class "com.datamelt.tweakflow.coords.Coordinates$utm2ll"};
+  function utm2ll: (long easting, long northing, long zone, string hemis)  -> via {:class "com.datamelt.tweakflow.std.Coordinates$utm2ll"};
 
 doc
 ~~~
@@ -70,7 +113,7 @@ Returns nil if any of the expected values is nil or not of type double or long.
 }
 ```
 ~~~
-  function ll2utm: (double latitude, double longitude)  -> via {:class "com.datamelt.tweakflow.coords.Coordinates$ll2utm"};
+  function ll2utm: (double latitude, double longitude)  -> via {:class "com.datamelt.tweakflow.std.Coordinates$ll2utm"};
 
 doc
 ~~~
@@ -96,8 +139,7 @@ Returns nil if any of the expected values is nil or not of type double or long.
 }
 ```
 ~~~
-  function decimal2degrees: (double latitude, double longitude)  -> via {:class "com.datamelt.tweakflow.coords.Coordinates$decimal2degrees"};
+  function decimal2degrees: (double latitude, double longitude)  -> via {:class "com.datamelt.tweakflow.std.Coordinates$decimal2degrees"};
 
 }
-
 

@@ -1,6 +1,5 @@
-package com.datamelt.tweakflow.strings;
+package com.datamelt.tweakflow.std;
 
-import com.datamelt.tweakflow.coords.Coordinates;
 import com.twineworks.tweakflow.lang.values.*;
 
 public class Soundex

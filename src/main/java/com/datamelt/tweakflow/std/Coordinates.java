@@ -1,4 +1,4 @@
-package com.datamelt.tweakflow.coords;
+package com.datamelt.tweakflow.std;
 
 import com.twineworks.tweakflow.lang.values.*;
 
