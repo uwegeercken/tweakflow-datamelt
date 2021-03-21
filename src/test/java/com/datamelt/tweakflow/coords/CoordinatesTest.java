@@ -105,10 +105,10 @@ class CoordinatesTest {
     @Test
     void testLl2utmSampleValueLongitude() {
         Coordinates.ll2utm l = new Coordinates.ll2utm();
-        Value value = l.call(context, Values.make(54.06982125373037), Values.make(9.241397640265722));
+        Value value = l.call(context, Values.make(54.0698), Values.make(9.2413));
         double northing = value.dict().get("northing").doubleNum();
 
-        assertEquals(5991317.000420985, northing);
+        assertEquals(5991314.613905625, northing);
     }
 
     @Test
