@@ -23,7 +23,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <skipTests>false</skipTests>
 
-        <tweakflow.version>1.3.2</tweakflow.version>
+        <tweakflow.version>1.3.4</tweakflow.version>
     </properties>
 
     <distributionManagement>
@@ -88,7 +88,7 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
-            <version>5.8.0-M1</version>
+            <version>5.8.1</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
